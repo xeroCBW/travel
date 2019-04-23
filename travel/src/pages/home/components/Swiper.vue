@@ -51,6 +51,7 @@
 </script>
 
 <style lang="stylus" scoped >
+  @import "../../../assets/styles/varibles.styl"
 
   /*类选择器要一直挨着*/
   .wrapper>>>.swiper-pagination-bullet-active{
