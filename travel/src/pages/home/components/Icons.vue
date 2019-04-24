@@ -5,7 +5,7 @@
     <swiper-slide v-for="(page,index) in pages" :key="index" >
       <div class="icon" v-for="item in page">
         <div class="icon-img">
-          <img class="icon-img-content" :src="item.imgurl" alt="">
+          <img class="icon-img-content" :src="item.imgUrl" alt="">
         </div>
         <p class="icon-desc">{{item.desc}}</p>
       </div>
@@ -32,55 +32,58 @@
 <script>
     export default {
         name: "HomeIcons",
+      props:{
+          lists:Array
+      },
         data:function () {
 
           return{
-            lists:[
-              {
-                desc:"热门景点",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png"
-              },
-              {
-                desc:"广州融创",
-                imgurl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/bda58ffc3016edad84e656e8a94b0321.png"
-              },
-              {
-                desc:"深圳必游",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png"
-
-              },
-              {
-                desc:"海洋馆",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png"
-              },
-              {
-                desc:"动植物园",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png"
-
-              },
-              {
-                desc:"深圳动物园",
-                imgurl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/cba147cf6cfcea7109d0bff6aac6f626.png"
-
-              },
-              {
-                desc:"世界之窗",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/a6/6d97515091789602.png"
-              },
-              {
-                desc:"玛雅水公园",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png"
-
-              },
-              {
-                desc:"东部华侨城",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png"
-              },
-              {
-                desc:"玩转长隆",
-                imgurl:"http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png"
-              }
-            ],
+            // lists:[
+            //   {
+            //     desc:"热门景点",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png"
+            //   },
+            //   {
+            //     desc:"广州融创",
+            //     imgurl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/bda58ffc3016edad84e656e8a94b0321.png"
+            //   },
+            //   {
+            //     desc:"深圳必游",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png"
+            //
+            //   },
+            //   {
+            //     desc:"海洋馆",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png"
+            //   },
+            //   {
+            //     desc:"动植物园",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png"
+            //
+            //   },
+            //   {
+            //     desc:"深圳动物园",
+            //     imgurl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/cba147cf6cfcea7109d0bff6aac6f626.png"
+            //
+            //   },
+            //   {
+            //     desc:"世界之窗",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/a6/6d97515091789602.png"
+            //   },
+            //   {
+            //     desc:"玛雅水公园",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png"
+            //
+            //   },
+            //   {
+            //     desc:"东部华侨城",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png"
+            //   },
+            //   {
+            //     desc:"玩转长隆",
+            //     imgurl:"http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png"
+            //   }
+            // ],
             swiperOption: {
               autoplay: false
             }

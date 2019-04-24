@@ -228,6 +228,44 @@ ellipsis()
 min-width: 0  /*设置形成...*/
 
 ```
-  
 
+
+# ajax 获取数据
+```vuejs
+npm install axios
+```  
+- 从static中获取数据
+```vuejs
+// 在ignore中添加忽略文件
+static/mock
+```
+- index.js 修改线上和线下版本
+```vuejs
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8081',  // 通过本地服务器将你的请求转发到这个地址
+        changeOrigin: true,  // 设置这个参数可以避免跨域
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      },
+    },
+```
+
+## 父子组件传值
+- 要子组件对应的属性和传过来的一致
+```vue
+  <home-header></home-header>
+  <home-swiper :lists="swiperList"></home-swiper>
+  <home-icons :lists="iconList"></home-icons>
+  <home-recommand :lists="recommandList"></home-recommand>
+  <home-weekend :lists="weekendList"></home-weekend>
+  
+```
+
+```vuejs
+      props:{
+          lists:Array
+      },
+```
 

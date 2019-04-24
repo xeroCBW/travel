@@ -18,25 +18,28 @@
 <script>
     export default {
       name: "HomeWeekend",
+      props:{
+        lists:Array
+      },
       data:function () {
         return {
-          lists: [
-              {
-                imgUrl:"http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
-                title:"清远周边逛",
-                desc:"人人都有一双发现美的眼睛，身边的事物最熟悉不过，那你可曾发现了被人遗漏的美？"
-              },
-              {
-                imgUrl:"http://img1.qunarzz.com/sight/source/1505/fa/ca65fde9677de2.jpg_r_640x214_4500e3ff.jpg",
-                title:"深圳必打卡",
-                desc:"来到深圳，你需要来这里签到"
-              },
-              {
-                imgUrl:"http://img1.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg",
-                title:"欢乐长隆",
-                desc:"世界欢乐汇聚长隆，这里拥有多个大型游乐设备和精彩的演出，和小伙伴们一起感受刺激的体验"
-              }
-            ]
+          // lists: [
+          //     {
+          //       imgUrl:"http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+          //       title:"清远周边逛",
+          //       desc:"人人都有一双发现美的眼睛，身边的事物最熟悉不过，那你可曾发现了被人遗漏的美？"
+          //     },
+          //     {
+          //       imgUrl:"http://img1.qunarzz.com/sight/source/1505/fa/ca65fde9677de2.jpg_r_640x214_4500e3ff.jpg",
+          //       title:"深圳必打卡",
+          //       desc:"来到深圳，你需要来这里签到"
+          //     },
+          //     {
+          //       imgUrl:"http://img1.qunarzz.com/sight/source/1602/88/bf120edeaea383.jpg_r_640x214_f8591f7b.jpg",
+          //       title:"欢乐长隆",
+          //       desc:"世界欢乐汇聚长隆，这里拥有多个大型游乐设备和精彩的演出，和小伙伴们一起感受刺激的体验"
+          //     }
+          //   ]
         }
       }
     }
