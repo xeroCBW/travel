@@ -196,4 +196,28 @@ E ~ F 通用选择器	选择匹配的F元素，且F元素是E元素后面的所�
             },
 ```
 
+## 实现图标
+
+- 使用swiper 来装数据
+- 直接使用for 循环没有办法实现分页,要用conpute属性 
+    + computed 中涉及到数据一个公式,直接将数据push进去的公式
+    ```aidl
+      computed:{
+        pages(){
+          const  pages = []
+          this.lists.forEach((item,index)=>{
+            const page=Math.floor((index/8))
+            //如果不存在就创建一个数组,
+            //然后根据index每次放一些进去
+            if(!pages[page]){
+              pages[page] = []
+            }
+            pages[page].push(item);
+          });
+          return pages
+        }
+      }
+```
+  
+
 
