@@ -304,5 +304,15 @@ static/mock
     &:before
       border-color #ccc
 ```
+## 使用better-scroll
+
+```js
+npm install better-scroll --save
+```
+- 修改最外层的list,将其变成absolute
+- 引入better-scroll 并且将其设置好,这样就可以头部不动了
+    + 设置ref="wrapper"
+    + wrapper之后是一个div(多加一层)
+    + 引入头文件
 
 
