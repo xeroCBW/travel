@@ -269,3 +269,11 @@ static/mock
       },
 ```
 
+# 城市界面制作
+
+## header 制作
+
+- 父组件使用positIon:relative
+- 子组件使用position:absolute left =0 top0
+
+

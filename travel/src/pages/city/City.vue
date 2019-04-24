@@ -1,16 +1,23 @@
 <template>
 <div>
-  <h1>city</h1>
+  <city-header></city-header>
 </div>
 
 </template>
 
 <script>
+  import CityHeader from './components/Header'
 export default {
-  name: 'City'
+  name: 'City',
+  components:{
+    CityHeader
+  }
+
 }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
+
+
 
 </style>
