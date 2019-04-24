@@ -281,5 +281,28 @@ static/mock
           .search-input
             width 100%
 ```
+## list
+
+- 使用wrapper进行占位,只要规定占用的宽度就可以,高度根据文字宽度+padding 确定
+```css
+
+    .button-wrapper
+      float left
+      width 33.33%
+      /*background-color green*/
+      .button
+        border 1px solid #ccc
+        border-radius 0.1rem
+        /*background yellow*/
+        margin: .1rem
+        padding: .1rem 0
+        text-align center
+```
+- 在border中插入样式
+```css
+  .border-bottom
+    &:before
+      border-color #ccc
+```
 
 
