@@ -31,7 +31,12 @@
             swiperOption:{
               //设置显示点点
               pagination:'.swiper-pagination',
-              loop:true
+              loop:true,
+              //轮播图自动播放
+              autoplay:{
+                delay:2000
+              }
+
             },
             // lists:[
             //   {
