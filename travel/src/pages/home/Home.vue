@@ -5,6 +5,7 @@
   <home-swiper></home-swiper>
   <home-icons></home-icons>
   <home-recommand></home-recommand>
+  <home-weekend></home-weekend>
 
   <!--<router-link to="/city">城市页面</router-link>-->
 </div>
@@ -15,13 +16,15 @@ import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommand from './components/Recommend'
+import HomeWeekend from './components/Weekend'
 export default {
   name: 'Home',
   components:{
     HomeHeader,
     HomeSwiper,
     HomeIcons,
-    HomeRecommand
+    HomeRecommand,
+    HomeWeekend
   }
 
 }

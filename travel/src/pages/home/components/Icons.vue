@@ -112,7 +112,7 @@
     /*overflow hidden  可以不写 .swiper-container 默认有这个属性*/
     height 0
     padding-bottom 50%
-    background green
+    /*background green*/
   .icon
     position relative
     float left
