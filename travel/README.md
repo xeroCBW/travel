@@ -275,5 +275,11 @@ static/mock
 
 - 父组件使用positIon:relative
 - 子组件使用position:absolute left =0 top0
+## 搜索框制作
+- 设置搜索框和宽度一样大
+```css
+          .search-input
+            width 100%
+```
 
 
