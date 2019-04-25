@@ -315,4 +315,13 @@ npm install better-scroll --save
     + wrapper之后是一个div(多加一层)
     + 引入头文件
 
+## 字母表
+
+- 设置位置 absolute
+- 布局为垂直布局
+```stylus
+    display: flex
+    flex-direction: column
+    justify-content: center
+```
 
