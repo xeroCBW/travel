@@ -34,7 +34,7 @@
       top 0
       line-height 0.84rem
       text-indent .2rem
-      width 1rem
+      min-width 1rem
       color white
       /*background-color red*/
 
