@@ -8,9 +8,6 @@
 
         <div class="button-list">
           <div class="button-wrapper"><div class="button">北京</div></div>
-          <div class="button-wrapper"><div class="button">北京</div></div>
-          <div class="button-wrapper"><div class="button">北京</div></div>
-          <div class="button-wrapper"><div class="button">北京</div></div>
         </div>
       </div>
       <div class="area">
@@ -38,10 +35,20 @@
       name: "CityList",
       props:{
         hotCities:Array,
-        cities:Object
+        cities:Object,
+        letter:String
       },
       mounted(){
         this.scroll= new Bscroll(this.$refs.wrapper);
+      },
+      watch:{
+        letter(){
+          if(this.letter){
+            //获取数据
+            const element = this.$refs[this.letter][0]
+            this.scroll.scrollToElement(element)
+          }
+        }
       }
     }
 </script>

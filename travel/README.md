@@ -325,3 +325,34 @@ npm install better-scroll --save
     justify-content: center
 ```
 
+#### 兄弟组件传值
+1. 先传值给父组件
+2. 然后父组件传值给子组件
+
+
+- js常用的事件
+```js
+onload加载完成事件    
+onclick单击事件 
+onblur失去焦点事件
+onchange内容发生改变事件  经常用于select下拉列表选中后的内容发生改变时候触发
+onsubmit表单提交事件 经常用来在表单提交的时候验证所有表单项是否合法。
+
+```
+- ref用来标识的,往后可以使用$refs来获取数据
+```vue
+      <div class="area"  v-for="(item,key) in cities" :ref="key" :key="key">
+```
+```vuejs
+      watch:{
+        letter(){
+          if(this.letter){
+            //获取数据
+            const element = this.$refs[this.letter][0]
+            this.scroll.scrollToElement(element)
+          }
+        }
+      }
+
+```
+
