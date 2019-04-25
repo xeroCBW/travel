@@ -3,14 +3,14 @@
   <div>
     <div class="title">热门推荐</div>
     <ul>
-      <li class="item" v-for="item in lists">
+      <router-link  tag="li" class="item" v-for="item in lists" :to="'/detail/' + item.id">
         <img class="item-img"  :src=item.imgUrl alt="">
         <div class="item-info">
           <p class="info-title">{{item.title}}</p>
           <p class="info-desc">{{item.desc}}</p>
           <button class="info-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
     </div>
 

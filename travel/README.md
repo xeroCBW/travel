@@ -369,3 +369,74 @@ npm install vuex --save
 ```css
 min-width 1rem
 ```
+
+### keepAlive 标签
+
+### active 
+ 
+ 页面被重新唤醒
+ 
+ # 动态路由
+ 
+ ```js
+const User = {
+  template: '<div>User</div>'
+}
+
+const router = new VueRouter({
+  routes: [
+    // 动态路径参数 以冒号开头
+    { path: '/user/:id', component: User }
+  ]
+})
+```
+ 
+ ```html
+ <ul>
+  <li></li>
+  <li></li>
+  <li></li>
+ </ul>
+ 
+ <!--变成-->
+  <ul>
+      <router-link  tag="li" class="item" v-for="item in lists" :to="'/detail/'+item.id">
+ 
+</router-link>
+  </ul>
+```
+
+
+- 定位方式
+
+ + static(默认)
+ + relative
+ + absolute
+
+
+
+### 替换掉原先老的字体
+
+重新生成,复制
+
+注意iconfont.css文件的替换
+.iconfont--->./iconfont/iconfont
+
+```css
+@font-face {font-family: "iconfont";
+  src: url('./iconfont/iconfont.eot?t=1556195220435'); /* IE9 */
+  src: url('./iconfont/iconfont.eot?t=1556195220435#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ8AAsAAAAACJAAAAPtAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqEKINKATYCJAMUCwwABCAFhG0HTxtdB1GUzc042Y+EzO0azXCcU8nFVunkwssEqfg2gvqx171HQXBIMp4tqag4YBWhEqEyvqAMu/qqVrWKjfjXv5tteG2nDXXJmdXUkQRSCw3hROFUKyonLl/i0uYeS/EvLo2TLljXzuJSe8EAhup4Jhar5VuhZg0f5F8cfxi78iJuJ9Br2mzYQXhsKmgqjHWBeKAlAtBMqZWa3NAttJKjxQ7bClV3Wse7CLz4fx//OYcmSGoG404nV2FiCPw1WTJS/lfCWV4BT+MZwU6RsQkU4rHU/ACF4U1IrzJbzQ7Qq1uSxpo0h7Pk/x1i/o6kveY/PEKSFaKBkd0PdlCk8GuyjRD8moOQ+OWMkPmVzH0x5RX0wqJv8RXjFqeEkOXmmKW28US+ltcicY9yBlm5oV5lSlWpzCTVdV3M+mSqr/nIrqLnVJpsmCXp33Oocbr4aPoGXHT7dvqdOxm3bqXdvBkwkwwoSIUvIKiq7+40Saus6egyLW667r7zqnXjtVs30lVHTh1SHjx5OCujfIpZRrUZUl0P1z1JBWr0Y8L09tyww1RV6ytAzcHJul2HLdXrj0zT6zxkwUtNrzJOragxqaycLZp34IQ0cP6hvfNMP5jM8x4rPXi8b6lznoH6edjEkGIsZsJJiLoPfao0AM977OT8wPaH3hgMYfCdP4Ce/0aDaIAIByAzZkIGTBwM2IqOfkaOYAtlQhZmQMFWWL7Rq25WwtEFgfHeT4CRpvfvwe/Vuzzs/6iDdWpiqHtoYkqW7o3nw+W7u3qlXTrW9legwg8dXOe+ip9/9YT8A6YH+EI8taWiJRXH6Xfobs8+XN61+/5ahVOm+WeYD9BR8n6gFYD8JdEAnSNIgQIByO94X//5Mn9e/ucX6Pl+1eRfbNe352crkLujVIP+1m7pViX+8KhSDyicZ2hqkRtsyas+FapDiLfF/ZkN/9U+6t440onW2YRuEzEkXaYg67aIKrhNqPpsQdNtG3ptiDjdZwwLiaIFrFsFIAwbhmTQJ8iGXUIV3F2oJr2FZjgQ9DoNo0v2WQ4aD2FJAUeKCeECghYxZZSl4/AgN5mUKEoEbJLnk9JJVk77CCd7x2wsgiwj2TF2yOdKnDmOIiiWKSXCwd3IkhKGkLFMESni7KUcJ/N2cKDK3slexJQCbh+LJMAhiRGEFiDQRBhlKLczB8/9fjKShEIJAbampUKfjsSSo8cnOLHn2AIVIS5r1XIts+XmknDG4VB4FYXFKEUIh0ZSiRlmEGTli4qQRDj2pD2CMt4cUDuqrdh+fmnpMx6CXsajavAwhKlh6pgGtCtBmVRB40W0oIxjFPM9ooY8Wa5gNDiFLK8CAAAAAA==') format('woff2'),
+  url('./iconfont/iconfont.woff?t=1556195220435') format('woff'),
+  url('./iconfont/iconfont.ttf?t=1556195220435') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./iconfont/iconfont.svg?t=1556195220435#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+```
+
+- 设置文本渐变效果
+
+```css
+      background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+```
