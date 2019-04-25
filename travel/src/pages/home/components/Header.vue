@@ -4,7 +4,7 @@
     <div class="header-left"><span class="iconfont">&#xe624;</span></div>
     <div class="header-input"> <span class="iconfont search-icon">&#xe632;</span> 输入城市/游玩主题</div>
     <router-link to="/city">
-      <div class="header-right">城市<span class="iconfont arrow-icon">&#xe62d;</span></div>
+      <div class="header-right">城城城城城城城市<span class="iconfont arrow-icon">&#xe62d;</span></div>
     </router-link>
   </div>
 
@@ -54,10 +54,12 @@
   .header-right{
 
     float right
-    width 1.24rem
+    min-width 1.24rem
     /*background-color blue*/
     text-align center
     color white
+    padding-left 0.2rem
+    padding-right 0.2rem
 
   }
   .arrow-icon{
