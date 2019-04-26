@@ -19,20 +19,20 @@
   .header
     position relative
     display flex
-    height 0.84rem
+    height $headerHeight
     background $bgColor
     p
       color white
       font-size 16px
       width 100%
       text-align center
-      line-height 0.84rem
+      line-height $headerHeight
     .header-back
       /*设置top lef才会进行对齐*/
       position absolute
       left 0
       top 0
-      line-height 0.84rem
+      line-height $headerHeight
       text-indent .2rem
       min-width 1rem
       color white
