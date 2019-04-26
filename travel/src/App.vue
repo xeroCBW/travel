@@ -2,7 +2,10 @@
   <div id="app">
     <!--干掉,直接搞一个很纯净的-->
     <!--<img src="./assets/logo.png">-->
-    <router-view/>
+    <!--<keep-alive exclude="Detail">-->
+      <router-view/>
+    <!--</keep-alive>-->
+
   </div>
 </template>
 

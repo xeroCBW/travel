@@ -516,3 +516,161 @@ deactived 实例失效
 ```
 
 #### 发送ajax 请求
+
+````js
+
+    axios.get('api/detail.json?id=' + this.$route.params.id)
+    axios.get('api/detail.json',{
+      params:{
+        id:this.$route.params.id
+      }
+    })
+
+````
+
+
+#### 排除keep-Alive
+- 滚动从新开始
+scrollBehavior
+
+```vue
+     <keep-alive exclude="Detail">
+       <router-view/>
+     </keep-alive>
+```
+
+#### 滚动行为
+
+```js
+
+export default new Router({
+  routes: [{
+    path: '/',
+    name: 'Home',
+    component: Home
+  }, {
+    path: '/city',
+    name: 'City',
+    component: City
+  }, {
+    path: '/detail/:id',
+    name: 'Detail',
+    component: Detail
+  }],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
+})
+```
+
+### 动画效果
+
+slot 是插槽的意思  
+制作动画组件,制作淡入淡出的效果
+
+```vue
+<template>
+  <transition>
+    <slot></slot>
+  </transition>
+</template>
+
+<script>
+export default {
+  name: 'FadeAnimation'
+}
+</script>
+
+<style lang="stylus" scoped>
+  .v-enter, .v-leave-to
+    opacity: 0
+  .v-enter-active, .v-leave-active
+    transition: opacity .5s
+</style>
+
+```
+
+
+### 配置接口联调数据
+
+```js
+
+  dev: {
+
+    // Paths
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8081',  // 通过本地服务器将你的请求转发到这个地址
+        changeOrigin: true,  // 设置这个参数可以避免跨域
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      },
+    },
+
+```
+
+加上这么一句
+ --host 0.0.0.0
+
+```
+  "scripts": {
+    "dev": "webpack-dev-server  --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "lint": "eslint --ext .js,.vue src",
+    "build": "node build/build.js"
+  },
+```
+
+
+#### 阻止拖动字母表时候一起动
+
+```
+        @touchStart.prevent="handleTouchStart"
+```
+
+
+### 解决手机白屏的问题(不支持promise)
+
+
+
+```node.js
+npm install babel-polyfill --save
+```
+
+
+
+### 打包上线
+
+```
+npm run build
+````
+
+会多出来一个dist 文件
+-dist
+-- index.html
+-- static
+
+
+### 修改打包文件的路径
+
+assetsPublicPath :/project 表示在project 下文件创建
+dist-->project
+访问路径为localhost/project/
+````js
+
+    // Paths
+    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+````
+
+ 
+# 如何学习
+## 边角知识
+## router
+## vuex
+## 服务器端渲染
+## vue资源

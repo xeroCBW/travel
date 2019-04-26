@@ -14,7 +14,8 @@ import  './assets/styles/iconfont.css'
 //  引入swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
-
+//解决不支持promise--白屏的问题
+import  'babel-polyfill'
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)

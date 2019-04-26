@@ -62,8 +62,20 @@ export default {
   methods:{
     getDetailInfo(){
       //获取请求
-      axios.get('api/detail.json?id=' + this.$route.params.id)
+      //axios.get('api/detail.json?id=' + this.$route.params.id)
+      axios.get('api/detail.json',{
+        params:{
+          id:this.$route.params.id
+        }
+      }).then(this.handleGetDataSucc)
 
+    },
+    handleGetDataSucc(res){
+      res = res.data
+      if(res.ret&&res.data){
+        const data = res.data;
+
+      }
     }
   },
   mounted(){
