@@ -487,3 +487,19 @@ removeEventListener
 :style=""
 ```
 
+## 事件的绑定和解绑
+
+ ```vue.js
+       mounted(){
+         window.addEventListener('scroll', this.handleScroll)
+       },
+       unmounted(){
+         window.removeEventListener('scroll', this.handleScroll)
+       }       
+```
+
+```vuejs
+actived 实例激活
+
+deactived 实例失效
+```
