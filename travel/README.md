@@ -503,3 +503,14 @@ actived 实例激活
 
 deactived 实例失效
 ```
+
+
+### 递归组件
+
+使用组件进行递归调用
+```html
+<detail-list>
+   <detail-list>
+   </detail-list>
+</detail-list>
+```
