@@ -16,6 +16,7 @@
   import DetailBanner from './components/banner'
   import DetailHeader from './components/Header'
   import DetailList from  './components/List'
+  import axios from 'axios'
 export default {
   name: 'Detail',
   components:{
@@ -57,6 +58,18 @@ export default {
         }
       ]
     }
+  },
+  methods:{
+    getDetailInfo(){
+      //获取请求
+      axios.get('api/detail.json?id=' + this.$route.params.id)
+
+    }
+  },
+  mounted(){
+    //重写该方法
+    this.getDetailInfo();
+
   }
 }
 </script>

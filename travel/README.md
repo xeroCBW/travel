@@ -514,3 +514,5 @@ deactived 实例失效
    </detail-list>
 </detail-list>
 ```
+
+#### 发送ajax 请求
